@@ -1,0 +1,159 @@
+<!Doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <style>h1, p {
+      text-align: center;
+  }
+  
+  h1 {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 2.5em;
+      margin-bottom: 0%;
+      margin-top: 30px
+  }
+  
+  p{
+      margin-top: 0%;
+      margin-bottom: 30px;
+  }
+  
+  body{
+      background-color: rgb(60, 135, 135);
+      margin: auto;
+      width: 50%;
+      color: white;
+  }
+  
+  hr{
+      border: 1px solid rgba(0, 0, 0, 0.582);
+      margin-top: 0%;
+      margin-bottom: 0%;
+      height: 1px;
+      background-color: rgba(0, 0, 0, 0.582);
+  }
+  
+  .inline {
+    width: unset;
+    margin: 0 0.5em 0 1em;
+    display: inline;
+    vertical-align: middle;
+  }
+  
+  input {
+      width: 70%;
+      margin-top: 7px;
+      margin-bottom: 7px;
+      padding: 7px;
+      background-color: rgb(60, 135, 137);
+  }
+
+  textarea {
+      width: 70%;
+      display: block;
+      margin-top: 7px;
+      margin-bottom: 7px;
+      padding: 7px;
+      background-color: rgb(60, 135, 137);
+  }
+
+  ::placeholder {
+      color: rgb(5, 5, 19);
+  }
+  
+  form {
+      margin-top: 50px;
+      margin-bottom: 50px;
+      background-color: rgb(27, 59, 59);
+      padding: 20px;
+      width: 100%;
+  }
+  
+  fieldset {
+      border: 1px solid rgba(0, 0, 0, 0.582);
+      border-radius: 5px;
+      padding: 10px;
+      margin-bottom:  30px;
+      margin-top: 30px;
+      border-width: 2px;
+  }
+  
+  label {
+      margin-top: 5px;
+      margin-bottom: 5px;
+      font-size: 1.2em;
+      display: block;
+  }
+  
+  button {
+      margin-top: 40px;
+      margin-bottom: 40px;
+      background-color: rgb(60, 135, 135);
+      border: 1px solid rgba(40, 77, 77, 0.582);
+      border-radius: 5px;
+      padding: 5px;
+      font-size: 1.2em;
+      text-align: center;
+      width: 90%;
+      margin-left: 5%;
+  }
+
+  legend {
+      font-size: 1.2em;
+  }
+
+  select {
+      width: 70%;
+      display: block;
+      margin-top: 7px;
+      margin-bottom: 7px;
+      padding: 7px;
+      background-color: rgb(74, 161, 151);
+  }
+  </style>
+    <title>Survey Form</title>
+  </head>
+  <body>
+    <form id="survey-form" action="" method="post">
+    <h1 id="title">Survey Form</h1>
+    <p id="description">Please take time out to fill this form.</p>
+      <fieldset>
+        <label id="name-label">Enter your name: <input required id="name" type="text" placeholder="first-name last-name" /></label>
+        <label id="email-label">Enter your email: <input required id="email" type="email" placeholder="abcde@gmail.com" /></label>
+        <label id="number-label">Enter your age: <input id="number" required type="number" placeholder="--" min="10" max="70" /></label>
+      </fieldset>
+      <hr>
+      <fieldset>
+        <legend>Do you like cats?</legend>
+        <label id="radio"><input type="radio" name="yes-no" value="yes" class="inline" /> Yes! :)</label>
+        <label id="radio"><input type="radio" name="yes-no" value="no" class="inline" /> No! :( </label>
+      </fieldset>
+      <hr>
+      <fieldset>
+        <label id="like">Which one of these do you like the best?</label>
+        <select id="dropdown">
+          <option value="">Select one</option>
+          <option value="1">Drawing</option>
+          <option value="2">Reading a book</option>
+          <option value="3">Watching your favourite show</option>
+          <option value="4">Other</option>
+        </select>
+      </fieldset>
+      <hr>
+      <fieldset>
+        <legend>Favourite season:</legend>
+        <label id="checkbox"><input class="inline" id="season" type="checkbox" value="summer" name="season" /> Summer </label>
+        <label id="checkbox"><input class="inline" id="season" type="checkbox" value="winter" name="season" /> Winter</label>
+        <label id="checkbox"><input class="inline" id="season" type="checkbox" value="spring" name="season" /> Spring</label>
+        <label id="checkbox"></label><input class="inline" id="season" type="checkbox" value="autumn" name="season" /> Autumn </label>
+      </fieldset>
+      <hr>
+      <fieldset>
+        <label id="bio">How do you spend your free time?</label>
+        <textarea id="bio" name="bio" rows="3" cols="50" placeholder="I like to draw in my free time"></textarea>
+      </fieldset>
+      <hr>
+      <button id="submit" type="submit">Submit</button>
+    </form>
+  </body>
+</html>
